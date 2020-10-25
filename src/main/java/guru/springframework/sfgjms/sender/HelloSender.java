@@ -53,7 +53,7 @@ public class HelloSender {
                     helloMessage = session.createTextMessage(objectMapper.writeValueAsString(message));
                     helloMessage.setStringProperty("_type", "guru.springframework.sfgjms.model.HelloWorldMessage");
 
-                    System.out.printf("Sending Hello.");
+                    System.out.println("Sending Hello.");
 
                     return helloMessage;
                 } catch (JsonProcessingException e){
